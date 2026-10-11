@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #24476b;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select, button {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #24476b;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Application Form</h2>
+
+        <form action="/submit" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="rollNo">Roll Number:</label>
+            <input type="text" id="rollNo" name="rollNo" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="">Select Branch</option>
+                <option>Computer Engineering</option>
+                <option>Electronics Engineering</option>
+                <option>Electronics and Computer Engineering</option>
+                <option>Information Technology</option>
+                <option>Mechanical Engineering</option>
+            </select>
+
+            <label for="year">Academic Year:</label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1">First Year</option>
+                <option value="2">Second Year</option>
+                <option value="3">Third Year</option>
+                <option value="4">Fourth Year</option>
+            </select>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
